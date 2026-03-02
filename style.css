@@ -1,0 +1,88 @@
+#body1{
+
+    background: linear-gradient(180deg, rgba(138, 183, 255,100), rgba(95, 155, 253,100));
+}
+
+
+#container1{
+    width: 100%;
+    height: 96vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    
+}
+
+
+#sun{
+    width: 100px;
+    font-size: 500px;
+    text-align: center;
+    height: 100px;
+    z-index: inherit;
+    animation: sun 10s linear infinite;
+
+}
+@keyframes sun{
+    1%{
+        transform: rotate(0deg);
+    }
+
+    
+    100%{
+        transform: rotate(360deg);
+        
+    }
+}
+
+.sun{
+    border-radius: 100%;
+    background: radial-gradient(circle at center,#e99a24,#fe9902);   
+    text-align: center;
+    z-index: inherit;
+    position: relative;
+    animation: rise  5s ease-in-out, sun-intro 7s 5s ease, sun-glow 1.5s ease infinite alternate;
+    animation-fill-mode: forwards;
+    z-index: -1;
+   
+    
+    
+}
+
+@keyframes rise{
+    0%{
+        top: 600px;
+    }
+
+    
+    100%{
+        top: 200px;
+        
+    }
+}
+@keyframes sun-intro{
+    0%{
+        width:0px;
+        height:0px;
+        
+
+        
+    }
+    
+    100%{
+        width: 250px;
+        height:250px;
+        
+        
+    }
+}
+@keyframes sun-glow{
+    0%{
+      box-shadow: 0 0 35px 10px #FFCC33,0 0 25px 25px #ffe893 inset ; 
+    }
+    100%{
+      box-shadow: 0 0 70px 35px #FFCC33,0 0 25px 25px #ffe893 inset ; 
+    }
+}
