@@ -18,18 +18,20 @@
 
 .button-container{
     position: relative;
-    height: 100px;
-    width: 100px;
+    height: 96vh;
+    width: 100%;
+    display: flex;
     background-color: red;
     justify-content: center;
     text-align: center;
     align-items: center;
     
+    
 
 }
 
 #click{
-
+      height: auto;
 }
 
 #sun{
@@ -58,15 +60,15 @@
     background: radial-gradient(circle at center,#e99a24,#fe9902);   
     z-index: inherit;
     position: relative;
-    animation: rise  4s ease-in-out, sun-intro 4.5s 4s ease-in-out, sun-glow  1.5s  ease infinite alternate;
+    box-shadow: 0 0 40px 25px #FFCC33,0 0 25px 25px #ffe893 inset ; 
+    animation: rise  4s ease-in-out, sun-intro 4.5s 4s ease-in-out, sun-glow  1.5s 4s ease infinite alternate, sun-srink 4s 15s ease-in-out ;
     animation-fill-mode: forwards;
     z-index: -1;
     width: 10px;
     height: 10px;
    
-    
-    
 }
+
 
 @keyframes rise{
     0%{
@@ -79,6 +81,7 @@
         
     }
 }
+
 @keyframes sun-intro{
     0%{
         width:10px;
@@ -95,6 +98,32 @@
         
     }
 }
+
+@keyframes sun-srink{
+    0%{
+        width: 250px;
+        height:250px;
+        
+        
+    }
+    
+    100%{
+        width:10px;
+        height:10px;
+        
+        
+    }
+}
+
+@keyframes sun-srink-glow {
+    0%{
+        box-shadow: 0 0 35px 10px #FFCC33,0 0 25px 25px #ffe893 inset ;
+    }
+    100%{
+        box-shadow: 0 0 15px 5px #FFCC33,0 0 15px 15px #ffe893 inset ;
+    }
+}
+
 @keyframes sun-glow{
     0%{
       box-shadow: 0 0 35px 10px #FFCC33,0 0 25px 25px #ffe893 inset ; 
@@ -107,10 +136,34 @@
 .text{
     font-size: 15px;
     font-family: "Bungee";
+    top: 300px;
+    position: absolute;
     font-style: normal;
-    color: rgb(255, 255, 255)
+    color: rgb(255, 255, 255);
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+    animation: text-reveal 3s 8s ease-out, text-disapear 2s 14s ease-in;
+    animation-fill-mode: forwards;
+    sto
 }
 
+@keyframes text-reveal{
+    0%{
+        clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+    }
+    100%{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+}
+
+@keyframes text-disapear {
+    0%{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    100%{
+        clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+    }
+    
+}
 
 .stars{
     position: absolute;
