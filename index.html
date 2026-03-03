@@ -9,11 +9,23 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            
+        }
+    </style>
 </head>
+
 <body>
     <div class="button-container" >
-        <button onclick="index2()" id="click">hello</button>
-        <h1>beta stage</h1>
+        <button onclick="index2()" id="click">click me</button>
+        <!-- preload the sound so it’s loaded before the click event -->
+        <!-- add `controls` here while you debug; remove when it works -->
+        <audio id="click-audio" src="click.mp3" preload="auto">
+            Your browser does not support audio.
+        </audio>
     </div>
     
 </body>
