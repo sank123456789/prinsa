@@ -78,7 +78,7 @@
     z-index: inherit;
     position: relative;
     box-shadow: 0 0 40px 25px #FFCC33,0 0 25px 25px #ffe893 inset ; 
-    animation: rise  4s ease-in-out, sun-intro 4.5s 4s ease-in-out, sun-glow  1.5s 4s ease infinite alternate, sun-srink 4s 15s ease-in-out ;
+    animation: rise  4s ease-out, sun-intro 4.5s 4s ease-in-out, sun-glow  1.5s 4s ease infinite alternate, sun-extra 3s 15s ease-out, sun-srink-glow 1s 8s ease-out;
     animation-fill-mode: forwards;
     z-index: -1;
     width: 10px;
@@ -116,18 +116,16 @@
     }
 }
 
-@keyframes sun-srink{
+@keyframes sun-extra{
     0%{
-        width: 250px;
-        height:250px;
+        opacity: 1;
         
         
     }
     
     100%{
-        width:10px;
-        height:10px;
-        
+       
+        opacity: 0;
         
     }
 }
@@ -191,7 +189,7 @@
     overflow: hidden;
     z-index: -2;
     opacity: 0;
-    animation: stars-opacity 2s 9s ease ;
+    animation: stars-opacity 2s 8s ease ;
     animation-fill-mode: forwards;
 }
 

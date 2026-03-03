@@ -18,5 +18,7 @@ function index2(){
         // still navigate so the user isn't stuck
         window.location.href = "index2.html";
     });
+ 
 }
+
 

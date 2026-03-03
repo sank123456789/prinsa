@@ -5,10 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Birthday Prinsa</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="icon.png">
     <script src="script.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            
+        }
+    </style>
 </head>
 <body id="body1">
     <div class="container" id="container1">
@@ -18,7 +26,15 @@
             <h2>HAPPY BIRTHDAY SUNSHINE</h2>
         </div>
     </div>
-
     
+    <script>
+        // Automatically go to index3 after 7 seconds (adjust to your animation length)
+        setTimeout(() => {
+           window.location.href = "index3.html";
+        }, 25000);
+        setTimeout(() => {
+            alert("When the sun saw you it disappeared because your the real sun"); // may be blocked on mobile
+        }, 20000); // Optional: Alert to guide the user
+    </script>
 </body>
 </html>
